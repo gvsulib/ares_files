@@ -1,0 +1,92 @@
+/* TABLES STYLES */
+.lib-table table {width:100%; border-collapse: collapse;clear:both;}
+.lib-table table tr.lib-row-headings th,
+.lib-table table tr.row-header th,
+.lib-table table tr.patFuncTitle th {text-align:left; background-color: #004875;color: #fff;font-size: inherit;font-weight:bold;border-bottom: 1px solid #bbb;}
+.lib-table table tr.lib-row-headings th a,
+.lib-table table tr.row-header th a { color: #fff !important; text-decoration: none;}
+.lib-table table tr.row-headings th,
+.lib-table table tr.patFuncHeaders th { text-align:left; background-color: #bbb;color: #363636;font-size: inherit;font-weight:bold;border-bottom: 1px solid #bbb; }
+tr.odd td,
+.lib-table tr.row-even td,
+.lib-table tr:nth-of-type(odd) td {background: #eee;}
+.lib-table tr td { border-bottom:1px solid #bbb;}
+.lib-table th,
+.lib-table td {padding:1.2em .5em;}
+.lib-table table tr.patFuncHeaders th a { color: #333 !important; } 
+
+/* Form Styles */
+.lib-form label{font-size:1em;margin: 1em 0 .25em 0;display:block;color: #333;font-weight: bold;text-transform: uppercase;}
+.lib-form input[type="text"],
+.lib-form input[type="password"],
+.lib-form input[type="email"],
+.lib-form textarea{width:96%;border:1px solid #ddd;font-size:1.1em;padding:.4em 1%;display:block;}
+.lib-form input[type="radio"],
+.lib-form input[type="checkbox"]{margin-top:.7em;}
+.lib-inline { display: inline-block !important;}
+
+/* Silly Aresness */
+.statusNormal { display: none; }
+
+/* Layout shim */
+.right { float: right; }
+
+/* Accessibility link */
+.hide-accessible { position: absolute !important; clip: rect(1px, 1px, 1px, 1px); }
+
+/* Ares menu */
+#cms-content h1 { float: left; }
+#cms-content h1 a { color: #333; text-decoration: none; }
+.lib-horizontal-list.right { list-style: none; float: right; font-size: .85em; }
+.lib-horizontal-list li { display: inline-block; }
+.lib-horizontal-list.right li { margin-left: 1em; }
+.lib-horizontal-list.right li a { text-decoration: none; /* color: #0065a4; */}
+
+#sub-navigation { margin-bottom: 1em;}
+#lib-settings-menu  a { display: inline-block; margin-right: 1em; }
+
+.student-table td strong { font-weight: normal;}
+
+#lib-subnav-wrap { display: none; }
+#lib-subnav-toggle { display: block;}
+#lib-subnav-wrap ul { list-style: none; margin: 0 !important; padding: 0;}
+#lib-subnav-wrap ul li { display: block; width: 100%;  text-align: left; margin: 0 !important; background: #0065a4;}
+#lib-subnav-wrap a { display: block;color: #fff !important; text-decoration: none !important;border-bottom: 1px solid #ddd;padding: .35em 2%; }
+#lib-subnav-toggle { width: auto; padding: .8em;}
+li#cr-search { width: 100%; background: #fff !important; padding-top: 1em;}
+#lib-subnav-wrap a.parent { display: none;}
+#lib-subnav-wrap a:hover { background: #093a6d !important;}
+#cms-footer ul { width: 100%;}
+li#lib-fed-deposit {text-align: right;float: right !important;}
+
+@media screen and (min-width: 450px) {
+	#docdel-contact{ float: left;}
+}
+
+@media screen and (min-width: 600px) {
+	form.ares-search input[type="text"] {display:block;width: 85%;float:left;}
+	form.ares-search input[type="submit"] { display: block; float: right;}
+}
+
+@media screen and (min-width: 768px) {
+	#lib-subnav-toggle { display: none;}
+	#lib-subnav-wrap { display: block !important;}
+	.lib-subnav:hover #lib-subnav-wrap { display: static; }
+	#lib-subnav-wrap a.parent { display: inline;}
+	#lib-subnav-wrap ul {list-style-type: none; margin: 0 !important; padding: 0 !important; background: #0065a4;}
+	#lib-subnav-wrap ul li { display: inline-block; position: relative; width: 20%;}
+	#lib-subnav-wrap a { border-bottom: none; color: #fff; text-decoration: none; display: block !important; padding: .5em 5%;margin-right: 0 !important; }
+	#lib-subnav-wrap ul li ul { display: none; width: 100%; background: #0065a4; position: absolute; z-index: 10; left: 0;}
+	#lib-subnav-wrap ul li:hover ul { display: block;}
+	#lib-subnav-wrap ul li ul li { display: block; width: 100%;}
+	#lib-subnav-wrap a:hover { background: #093a6d !important;}
+	li#cr-search { width: 35% !important; float: right;background: #0065a4 !important;padding-top: .25em;}
+	form.ares-search input[type="text"] {display:block;width: 65%;}
+}
+
+@media screen and (min-width: 54em) {
+}
+
+@media screen and (max-width: 900px) {
+	#lib-settings-menu a { display: block; margin: .5em 0;}
+}
