@@ -58,7 +58,12 @@ li#cr-search { width: 100%; background: #fff !important; padding-top: 1em;}
 #lib-subnav-wrap a:hover { background: #093a6d !important;}
 #cms-footer ul { width: 100%;}
 li#lib-fed-deposit {text-align: right;float: right !important;}
-
+#library-chat a {
+	padding: .65em .85em .65em 3em !important;
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8klEQVQ4y2NgoAWIPhHNl3I6xSH1TGoRkK5KPpXskXgoUZQYvYxATRmpp1M/pZ1J+4+Gf6WeSm323ObJjlNz2um0TVg0omCgBRdjd8ZyY+gGai4kpBnJkFkompOPJQsBJX4QawAIp5xIMYYbkHoy1Z0UzWADTqcUIDu/GqtTT6fi88YSZANySHUBUM8URBicTjYj2YAzafFwA0JXhbIBnXuP6FgAppOkI0lSqDFxOtkaKPGHqAA8lZKINSUBU1oqUMFXPDb/AQZeG960nHQ6SQmoaB1QwzukEP8CpPcBLTAlKVMlHE9QAGrUYGhgYGKgFQAAoot2F4Rm8VoAAAAASUVORK5CYII=') !important;
+	background-position: 10% 50%;
+	background-repeat: no-repeat;
+}
 @media screen and (min-width: 450px) {
 	#docdel-contact{ float: left;}
 }
