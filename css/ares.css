@@ -20,6 +20,7 @@ tr.odd td,
 .lib-form input[type="text"],
 .lib-form input[type="password"],
 .lib-form input[type="email"],
+.lib-form input[type="tel"],
 .lib-form textarea{width:96%;border:1px solid #ddd;font-size:1.1em;padding:.4em 1%;display:block;}
 .lib-form input[type="radio"],
 .lib-form input[type="checkbox"]{margin-top:.7em;}
