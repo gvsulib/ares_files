@@ -121,9 +121,9 @@ $(document).ready(function() {
                          
             var classesMessage = $('#student_classes').find('table').find('tr.row-message').text();
             
-             console.log(classesMessage);
+             console.log('On student page: ' + classesMessage);
              
-            if(classesMessage == "No classes found.\n") {
+            if(classesMessage.indexOf('classes found') > 0) {
                 console.log('Student has no classes. Hiding empty table and showing help tips.');
                 
                 $('#student_classes').hide();
@@ -137,7 +137,7 @@ $(document).ready(function() {
             var classesMessage = $("#current_classes").find('table').find("tr.row-message").text();
             var waitingMessage = $('#waiting_for').find('table').find('tr.row-message').text();
             
-            if(classesMessage == 'No classes found. ') {
+            if(classesMessage.indexOf('classes found') > 0) {
                 console.log('Instructor has no classes. Hiding empty table and showing help tips.');
                 
                 $('#current_classes').hide();

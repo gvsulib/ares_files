@@ -69,6 +69,11 @@ li#lib-fed-deposit {text-align: right;float: right !important;}
 	background-repeat: no-repeat;
 }
 
+/* Hide useless hard copy "links" */
+#main > span.disabledText {
+	display: none;
+}
+
 @media screen and (min-width: 450px) {
 	#docdel-contact{ float: left;}
 }
