@@ -25,33 +25,36 @@ $(document).ready(function() {
 		var itemURLLink, itemTextLink;
 		
 		
-		
-		$(".statusNormal").addClass("lib-alert");
+		if($('.statusNormal').length > 0) {
+			$(".statusNormal").addClass("alert alert-warning");
 
-		var statusText = $(".statusNormal").text();
-		var stupidBlankStatus = $("#status0").text();
-        console.log(statusText);
-		if(stupidBlankStatus == "") {
-			$("#status0").hide();
+			var statusText = $(".statusNormal").text();
+			var stupidBlankStatus = $("#status0").text();
+	        console.log(statusText);
+			if(stupidBlankStatus == "") {
+				$("#status0").hide();
+			}
+			if(statusText == "When Finished Editing, press the Submit Information button below.") {
+				$(".statusNormal").hide();
+			}
+			if(statusText == "Your item was added to ares.") {
+				$(".statusNormal").text("Thank you! We'll process your item soon.");
+			}
+			if(statusText == "Choose an option from the choices below.") {
+				$(".statusNormal").hide();
+			}
+			if(statusText == "Choose a file to upload") {
+				$(".statusNormal").hide();
+			}
+			if(statusText == "Please logon") {
+				$(".statusNormal").text("Your session has expired. Please log in again.");
+			}
+	        if(statusText == "Your course was removed. If this was done in error, please contact the reserve desk staff.") {
+	            $(".statusNormal").text('<b>Your class was removed.</b><br />Didn&#8217;t mean to remove it? Get in touch so we can help: <a href="mailto:ereserve@gvsu.edu">ereserve@gvsu.edu</a> or (616) 331-2617.');
+	        }
 		}
-		if(statusText == "When Finished Editing, press the Submit Information button below.") {
-			$(".statusNormal").hide();
-		}
-		if(statusText == "Your item was added to ares.") {
-			$(".statusNormal").text("Thank you! We'll process your item soon.");
-		}
-		if(statusText == "Choose an option from the choices below.") {
-			$(".statusNormal").hide();
-		}
-		if(statusText == "Choose a file to upload") {
-			$(".statusNormal").hide();
-		}
-		if(statusText == "Please logon") {
-			$(".statusNormal").text("Your session has expired. Please log in again.");
-		}
-        if(statusText == "Your course was removed. If this was done in error, please contact the reserve desk staff.") {
-            $(".statusNormal").text('<b>Your class was removed.</b><br />Didn&#8217;t mean to remove it? Get in touch so we can help: <a href="mailto:ereserve@gvsu.edu">ereserve@gvsu.edu</a> or (616) 331-2617.');
-        }
+		
+		
 		
 		if($(".tableCourseValidation").length > 0) {
 		
