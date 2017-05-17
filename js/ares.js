@@ -139,6 +139,31 @@ $(document).ready(function() {
             
             var classesMessage = $("#current_classes").find('table').find("tr.row-message").text();
             var waitingMessage = $('#waiting_for').find('table').find('tr.row-message').text();
+
+            if($('.table-action').length > 0) { // Homepage, Course Home Links need fixin'
+
+				console.log('Homepage, Course Home Links need fixing.');
+
+				$('table.instructor-table').find('tbody').find('tr').each(function() {
+					// Get values
+					var courseURL = $(this).find('a').attr('href');
+					var courseAria = $(this).find('a').attr('aria-label');
+					var courseName = $(this).find('td:nth-child(2)').text();
+
+					// Troubleshooting
+					console.log(courseName + ' // ' + courseAria + ' // ' + courseURL);
+
+					// Make linked item 
+					$(this).find('td:nth-child(2)').html('<a href="' + courseURL + '" aria-label="' + courseAria + '">' + courseName + '</a>');
+
+
+				});
+
+				// Now hide the first column
+				$('table.instructor-table').find('thead').find('tr.row-headings').find('th:first-child').hide();
+				$('table.instructor-table').find('tbody').find('td:first-child').hide();
+
+			}
             
             if(classesMessage.indexOf('classes found') > 0) {
                 console.log('Instructor has no classes. Hiding empty table and showing help tips.');
