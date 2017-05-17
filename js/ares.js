@@ -191,14 +191,16 @@ $(document).ready(function() {
 
 			// Load user account page in the background to get user name
 
-			$('#renewalHack').load('https://gvsu.ares.atlas-sys.com/ares/ares.dll?Action=20&Form=81 #nameInfo');
+			$('#renewalHack').load('https://gvsu.ares.atlas-sys.com/ares/ares.dll?Action=20&Form=81 #nameInfo', function() {
+  	
+  					console.log('Load was performed.');
+					// Now grab the info
 
-			// Now grab the info
+					var userFirstName = $('#renewalHack').find('#FirstName').text();
+					var userLastName = $('#renewalHack').find('#LastName').text();
 
-			var userFirstName = $('#renewalHack').find('#FirstName').text();
-			var userLastName = $('#renewalHack').find('#LastName').text();
-
-			$('#CourseInstructor').val(userLastName + ', ' + userFirstName);
+					$('#CourseInstructor').val(userLastName + ', ' + userFirstName);
+			});
 
 		}
 
