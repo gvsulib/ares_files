@@ -186,12 +186,12 @@ $(document).ready(function() {
 
         // Prepopulate Instructor Name in Create Course Screen
 
-        
+
 		if(($('#CourseInstructor').length > 0) && ($('#CourseInstructor').val() == '')) {
 
 			// Load user account page in the background to get user name
 
-			$('#renewalHack').load('https://gvsu.ares.atlas-sys.com/ares/ares.dll?Action=20&Form=81#nameInfo');
+			$('#renewalHack').load('https://gvsu.ares.atlas-sys.com/ares/ares.dll?Action=20&Form=81 #nameInfo');
 
 			// Now grab the info
 

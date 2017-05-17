@@ -47,7 +47,8 @@ tr.odd td,
 #lib-settings-menu  a { display: inline-block; margin-right: 1em; }
 
 .student-table td strong { font-weight: normal;}
-
+table caption { text-align: left;font-size: 1.1em;font-weight: bold; }
+#waiting_for { padding-top: 2em; clear:both; }
 #lib-subnav-wrap { display: none; }
 #lib-subnav-toggle { display: block;}
 #lib-subnav-wrap ul { list-style: none; margin: 0 !important; padding: 0;}
