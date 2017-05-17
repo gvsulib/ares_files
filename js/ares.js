@@ -149,7 +149,7 @@ $(document).ready(function() {
             
             console.log(waitingMessage);
             
-              if(waitingMessage == "No classes found\n") {
+              if(waitingMessage == "No classes found") {
                   
                 console.log('Not waiting on materials from instructor. Hiding empty table.');
                 
