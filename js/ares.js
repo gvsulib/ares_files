@@ -244,6 +244,7 @@ $(document).ready(function() {
 				var checkedlink = $(this).is(":checked");
 				if(checkedlink == true) {
 					$("#supply-url").show();
+					$("#supply-file").hide();
 					$("#button-suffix").hide();
 					$("#supply-campus").hide();
 					$("#provide-div").hide();
@@ -269,6 +270,7 @@ $(document).ready(function() {
 					}
 				
 					$("#supply-campus").show();
+					$("#supply-file").hide();
 					$("#supply-url").hide();
 					$("#button-suffix").hide();
 					$("#provide-div").hide();
@@ -286,6 +288,7 @@ $(document).ready(function() {
 				if(checkedlink == true) {
 					$("#supply-campus").hide();
 					$("#supply-url").hide();
+					$("#supply-file").show();
 					$("#provide-div").hide();
 					if(CallNo !== "") {
 						$("#CallNoDiv").html(CallNo);
@@ -303,6 +306,7 @@ $(document).ready(function() {
 				if(checkedlink == true) {
 					$("#supply-campus").hide();
 					$("#supply-url").hide();
+					$("#supply-file").hide();
 					$("#button-suffix").hide();
 					document.getElementById("URL").value = ''; // Clear the value
 					$("#provide-div").show();
