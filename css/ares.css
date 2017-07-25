@@ -59,9 +59,10 @@ li#cr-search { width: 100%; background: #fff !important; padding-top: 1em;}
 #lib-subnav-wrap a.parent { display: none;}
 #lib-subnav-wrap a:hover { background: #093a6d !important;}
 #cms-footer ul { width: 100%;}
-#cms-content a { color: #1F65A0; text-decoration: none;}
-a.btn.btn-primary, .btn.btn-primary a { color: #fff !important;}
-a.btn.btn-default, .btn.btn-default a { color: #333 !important; }
+a.btn.btn-primary, .btn.btn-primary a { color: #fff;}
+a.btn.btn-default, .btn.btn-default a { color: #333}
+a.btn.btn-primary:hover, .btn.btn-primary a:hover { color: #1b6ec2;}
+
 li#lib-fed-deposit {text-align: right;float: right !important;}
 #library-chat a {
 	padding: .65em .85em .65em 3em !important;
