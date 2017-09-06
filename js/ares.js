@@ -141,7 +141,7 @@ $(document).ready(function() {
             var classesMessage = $("#current_classes").find('table').find("tr.row-message").text();
             var waitingMessage = $('#waiting_for').find('table').find('tr.row-message').text();
 
-            if($('.table-action').length > 0) { // Homepage, Course Home Links need fixin'
+           /* if($('.table-action').length > 0) { // Homepage, Course Home Links need fixin'
 
 				console.log('Homepage, Course Home Links need fixing.');
 
@@ -164,7 +164,7 @@ $(document).ready(function() {
 				$('table.instructor-table').find('thead').find('tr.row-headings').find('th:first-child').hide();
 				$('table.instructor-table').find('tbody').find('td:first-child').hide();
 
-			}
+			} */
             
             if(classesMessage.indexOf('classes found') > 0) {
                 console.log('Instructor has no classes. Hiding empty table and showing help tips.');
