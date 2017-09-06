@@ -135,36 +135,36 @@ $(document).ready(function() {
             }
             
         } 
+
+        // Add clone links to listings
+        if($('table.instructor-table').length > 0) {
+        	$('table.instructor-table').find('a').each(function() { 
+				var baseLink = $(this).attr('href');
+
+				// Replace the form value with the one for cloning a class
+				var cloneLink = baseLink.replace('Form=60', 'Form=114');
+
+				// Add new cell at the end of the table for Cloning the course
+				$(this).closest('tr').find('td:last-child').prepend('<a href="' + cloneLink + '" class="clone-link btn btn-default" style="float: right;font-size:.85em;">Clone Class</a>');
+
+			});
+        }
+
         
         if($("#current_classes").length > 0) { // Instructor Home Screen
             
             var classesMessage = $("#current_classes").find('table').find("tr.row-message").text();
             var waitingMessage = $('#waiting_for').find('table').find('tr.row-message').text();
 
-           /* if($('.table-action').length > 0) { // Homepage, Course Home Links need fixin'
+
+           if($('.table-action').length > 0) { // Homepage, Course Home Links need fixin'
 
 				console.log('Homepage, Course Home Links need fixing.');
 
-				$('table.instructor-table').find('tbody').find('tr').each(function() {
-					// Get values
-					var courseURL = $(this).find('a').attr('href');
-					var courseAria = $(this).find('a').attr('aria-label');
-					var courseName = $(this).find('td:nth-child(2)').text();
-
-					// Troubleshooting
-					console.log(courseName + ' // ' + courseAria + ' // ' + courseURL);
-
-					// Make linked item 
-					$(this).find('td:nth-child(2)').html('<a href="' + courseURL + '" aria-label="' + courseAria + '">' + courseName + '</a>');
-
-
+				$('.table-action').find('a').each(function() {
+					$(this).addClass('btn btn-primary');
 				});
-
-				// Now hide the first column
-				$('table.instructor-table').find('thead').find('tr.row-headings').find('th:first-child').hide();
-				$('table.instructor-table').find('tbody').find('td:first-child').hide();
-
-			} */
+			} 
             
             if(classesMessage.indexOf('classes found') > 0) {
                 console.log('Instructor has no classes. Hiding empty table and showing help tips.');
