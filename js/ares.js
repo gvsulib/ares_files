@@ -232,7 +232,7 @@ $(document).ready(function() {
 			
 			$("#supply-url").hide();
 			$("#supply-campus").hide();
-			$("#submit-container").append('<span id="button-suffix" style="font-size:1.2em;color:#575757;">and Upload Your File</span>');
+			
 			// Make ISBN field hidden by default and add a label
 
 			$("#isbn-div").prepend('<span id="isbn-toggle">+ Add an <abbr title="International Standard Serials Number">ISSN</abbr>, <abbr title="International Standard Book Number">ISBN</abbr>, or Call Number</span>').css("color","#00549D").css("text-transform", "capitalize").css("cursor", "pointer").css("margin-bottom","1.2em");
@@ -271,6 +271,10 @@ $(document).ready(function() {
 					$('#StaffSearch').attr("checked", "checked");
 					$('label[for="StaffSearch"]').text('Use Library Copy');
 					$("#article-book-chapter").slideToggle(400);
+					$("#provide-div").show();
+					CallNo = $("#CallNoDiv").html();
+					$("#provide-div").html('<div class="line"><div class="span2 unit left"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span2 unit left lastUnit">' + CallNo + '</div></div>');
+					$("#CallNoDiv").html("&nbsp;");
 				}	
 			});
 			
@@ -362,7 +366,6 @@ $(document).ready(function() {
 					$("#supply-campus").hide();
 					$("#supply-url").hide();
 					$("#supply-file").hide();
-					$("#button-suffix").hide();
 					document.getElementById("URL").value = ''; // Clear the value
 					$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
@@ -380,7 +383,6 @@ $(document).ready(function() {
 					// Give them other options if results are null
 
 				} else {
-					$("#button-suffix").hide();
 					if(CallNo !== "") {
 						$("#CallNoDiv").html(CallNo);
 					}
@@ -400,17 +402,14 @@ $(document).ready(function() {
 			// Show the appropriate supply selection
 			
 			if($("#WebLink").is(":checked")) {
-				$("#button-suffix").hide();
 				$("#supply-url").show();
 			}
 			
 			if($("#WillDeliver").is(":checked")) {
-				$("#button-suffix").hide();
 				$("#supply-campus").show();
 			}
 			
 			if($("#StaffSearch").is(":checked")) {
-				$("#button-suffix").hide();
 				$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
 					$("#provide-div").html('<div class="line"><div class="span2 unit left"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span2 unit left lastUnit">' + CallNo + '</div></div>');
