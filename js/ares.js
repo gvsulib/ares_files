@@ -253,6 +253,9 @@ $(document).ready(function() {
 					$("#publication-date-field").find("input").attr("id","JournalYear").attr("name","JournalYear");
 					$("#publication-date-field").find("label").attr("for","JournalYear");
 					$('label[for="Title"]').html('<span class="req">*</span><span class="Valid">Book, Journal, or work title</span>');
+					$('#StaffSearch').prop("checked", false);
+					$('#File').prop("checked", true);
+					$('label[for="StaffSearch"]').text('Scan Library Copy');
 					document.getElementById('format').value = 'Article';
 					document.getElementById('ItemType').value = 'SER';
 
@@ -265,6 +268,8 @@ $(document).ready(function() {
 					$("#publication-date-field").find("label").attr("for","PubDate");
 					$(".js-fallback-book").html(bookDetails);
 					$(".js-fallback-article").html("");
+					$('#StaffSearch').prop("checked", true);
+					$('label[for="StaffSearch"]').text('Use Library Copy');
 					$("#article-book-chapter").slideToggle(400);
 				}	
 			});
