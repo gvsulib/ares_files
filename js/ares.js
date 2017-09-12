@@ -255,6 +255,10 @@ $(document).ready(function() {
 					$('label[for="Title"]').html('<span class="req">*</span><span class="Valid">Book, Journal, or work title</span>');
 					$('#StaffSearch').attr("checked", "");
 					$('#File').attr("checked", "checked");
+					$("#supply-file").show();
+					$("#provide-div").hide();
+					CallNo = $("#CallNoDiv2").html();
+					$("#CallNoDiv").html(CallNo);
 					$('label[for="StaffSearch"]').text('Scan Library Copy');
 					document.getElementById('format').value = 'Article';
 					document.getElementById('ItemType').value = 'SER';
@@ -273,8 +277,10 @@ $(document).ready(function() {
 					$("#article-book-chapter").slideToggle(400);
 					$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
-					$("#provide-div").html('<div class="line"><div class="span2 unit left"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span2 unit left lastUnit">' + CallNo + '</div></div>');
+					$("#provide-div").html('<div class="line row"><div class="span2"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div id="CallNoDiv2" class="span1">' + CallNo + '</div></div>');
 					$("#CallNoDiv").html("&nbsp;");
+					$("#supply-file").hide();
+
 				}	
 			});
 			
