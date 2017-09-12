@@ -277,7 +277,7 @@ $(document).ready(function() {
 					$("#article-book-chapter").slideToggle(400);
 					$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
-					$("#provide-div").html('<div class="line row" style="margin-top:1em;"><div class="span2"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div id="CallNoDiv2" class="span1">' + CallNo + '</div><style>label[for="CallNumber"]{margin-top:0 !important;}</div>');
+					$("#provide-div").html('<div class="line row" style="margin-top:1em;"><div class="span2"><div class="cms-chunk-inner"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div></div><div id="CallNoDiv2" class="span1"><div class="cms-chunk-inner">' + CallNo + '</div></div><style>label[for="CallNumber"]{margin-top:0 !important;}</div>');
 					$("#CallNoDiv").html("&nbsp;");
 					$("#supply-file").hide();
 
