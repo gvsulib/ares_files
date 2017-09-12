@@ -252,6 +252,7 @@ $(document).ready(function() {
 					$(".js-fallback-book").html("");
 					$("#publication-date-field").find("input").attr("id","JournalYear").attr("name","JournalYear");
 					$("#publication-date-field").find("label").attr("for","JournalYear");
+					$('label[for="Title"]').html('<span class="req">*</span><span class="Valid">Book, Journal, or work title</span>');
 					document.getElementById('format').value = 'Article';
 					document.getElementById('ItemType').value = 'SER';
 
@@ -259,6 +260,7 @@ $(document).ready(function() {
 					document.getElementById('ArticleTitle').value = '';
 					document.getElementById('format').value = 'Book';
 					document.getElementById('ItemType').value = 'MON';
+					$('label[for="Title"]').html('<span class="req">*</span><span class="Valid">Book, DVD, CD, or other title</span>');
 					$("#publication-date-field").find("input").attr("id","PubDate").attr("name","PubDate");
 					$("#publication-date-field").find("label").attr("for","PubDate");
 					$(".js-fallback-book").html(bookDetails);
