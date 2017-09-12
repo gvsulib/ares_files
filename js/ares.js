@@ -235,7 +235,7 @@ $(document).ready(function() {
 			
 			// Make ISBN field hidden by default and add a label
 
-			$("#isbn-div").prepend('<span id="isbn-toggle">+ Add an <abbr title="International Standard Serials Number">ISSN</abbr>, <abbr title="International Standard Book Number">ISBN</abbr>, or Call Number</span>').css("color","#00549D").css("text-transform", "capitalize").css("cursor", "pointer").css("margin-bottom","1.2em");
+			$("#isbn-div").prepend('<span id="isbn-toggle">+ Add More Details</span>').css("color","#00549D").css("text-transform", "capitalize").css("cursor", "pointer").css("margin-bottom","1.2em").css("margin-top","1em");
 			$("#number-wrapper").hide();
 			$("#isbn-toggle").click(function() {
 				$(this).next("#number-wrapper").slideToggle(400);
