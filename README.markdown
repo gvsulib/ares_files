@@ -40,14 +40,14 @@ You'll need to call the JavaScript file from your template as well. I prefer to 
 
 ### For Students:
 
-* Replaces the default "blank" home screen at the beginning of each semester with useful information aimed at helping students add their classes
-* Design improvements to the item listing page to make it easier to find the items you need
+* Replaces the default "blank" home screen at the beginning of each semester with useful information aimed at helping students add their classes (More details at [https://matthew.reidsrow.com/worknotes/130](https://matthew.reidsrow.com/worknotes/130))
+* Design improvements to the item listing page to make it easier to find the items you need (More details at [https://matthew.reidsrow.com/worknotes/32](https://matthew.reidsrow.com/worknotes/32))
 
 ### For Instructors:
 
-* Replaces the default "blank" home screen at the beginning of each semester with useful information aimed at helping instructors add or clone their classes and get items online
-* Simplifies the decision of whether to add a new class or clone an old one by integrating the "Add Class" and "Clone Class" features into a simple dialog box
-* JavaScript combines all 7 item type submission forms, simplfying adding items for your instructors
+* Replaces the default "blank" home screen at the beginning of each semester with useful information aimed at helping instructors add or clone their classes and get items online (More details at [https://matthew.reidsrow.com/worknotes/137](https://matthew.reidsrow.com/worknotes/137))
+* Simplifies the decision of whether to add a new class or clone an old one by integrating the "Add Class" and "Clone Class" features into a simple dialog box, and relocating the clone class feature to the course listing page. (More details at [https://matthew.reidsrow.com/worknotes/203](https://matthew.reidsrow.com/worknotes/203))
+* JavaScript combines all 7 item type submission forms, simplfying adding items for your instructors. Here's a video of the form in action: [https://vimeo.com/53361712](https://vimeo.com/53361712)
 * Simplifies the decision of how to supply content by walking instructors through the options
 * Improved form validation
 * And more!
