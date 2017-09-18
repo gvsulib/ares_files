@@ -15,7 +15,8 @@ You'll need a server to host these customzied CSS and JavaScript files. Once you
 
 Add the CSS file in the `<head>` section if possble. Replace the URL below with the actual URL to your CSS file:
 
-```<link rel="stylesheet" type="text/css" href="https://URL/TO/YOUR/CSS_FILE.css" />
+```
+<link rel="stylesheet" type="text/css" href="https://URL/TO/YOUR/CSS_FILE.css" />
 </head>
 ```
 
@@ -23,7 +24,8 @@ Add the CSS file in the `<head>` section if possble. Replace the URL below with 
 
 You'll need to call the JavaScript file from your template as well. I prefer to call the script from right before the closing `<body>` tag. Replace the URL below with the actual URL to your JavaScript file.
 
-```<script src="https://URL/TO/YOUR/JS_FILE.js"></script>
+```
+<script src="https://URL/TO/YOUR/JS_FILE.js"></script>
 </body>
 </html>
 ```
