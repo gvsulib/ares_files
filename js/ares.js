@@ -35,8 +35,9 @@ $(document).ready(function() {
 			if(stupidBlankStatus == "") {
 				$("#status0").hide();
 			}
-			if($('.statusNormal:contains("Your User Information Has Been Saved")')) 
-				{$('#statusContainer').prepend('<div class="alert alert-success"><p>Your user information has been updated.</div>')};
+			if(statusText.indexOf("Your User Information Has Been Saved") >= 0) {
+				$('#statusContainer').prepend('<div class="alert alert-success"><p>Your user information has been updated.</div>');
+			}
 			if(statusText == "When Finished Editing, press the Submit Information button below.") {
 				$(".statusNormal").hide();
 			}
