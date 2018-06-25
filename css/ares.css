@@ -94,7 +94,7 @@ li#lib-fed-deposit {text-align: right;float: right !important;}
     		position: fixed;
     		top: 20%;
     		left: 20%;
-    		z-index: 1000;
+    		z-index: 5000;
     		box-shadow: 5px;
     		border: 2px solid #bbb;
 		}
