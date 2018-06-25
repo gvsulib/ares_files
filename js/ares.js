@@ -522,7 +522,7 @@ if($('#addClassModal').length > 0) {
 	// On the Instructor homepage
 
 // Check for number of current classes
-		var cloneClasses = $('#current-classes table tbody tr .table-action').length; 
+		var cloneClasses = $('#current_classes table tbody tr .table-action').length; 
 		console.log('Number of current classes: ' + cloneClasses);
 
     // Define variables
