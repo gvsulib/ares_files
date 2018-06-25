@@ -523,7 +523,7 @@ if($('#addClassModal').length > 0) {
 
 // Check for number of current classes
 		var cloneClasses = $('#current-classes table tbody tr .table-action').length; 
-		console.log('Number of classes: ' + cloneClasses);
+		console.log('Number of current classes: ' + cloneClasses);
 
     // Define variables
 		var prevCourseList ='', courseSemester, courseName, courseNumber, courseSection, courseCloneLink, t=0;
