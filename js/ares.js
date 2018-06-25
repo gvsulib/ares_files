@@ -515,6 +515,107 @@ $(document).ready(function() {
 
 		}
 
+/* Function for improving Course Cloning */
+
+// Check for number of current classes
+		var cloneClasses = $('#main-table table tbody tr .table-action').length; 
+		console.log('Number of classes: ' + cloneClasses);
+
+    // Define variables
+		var prevCourseList ='', courseSemester, courseName, courseNumber, courseSection, courseCloneLink, t=0;
+
+		if(cloneClasses > 0) { // There are current classes
+
+				var totalClasses = cloneClasses;
+
+				// Build class list
+
+				$('#main-table table tbody tr').each(function() {
+					if(t < 3) {
+
+						courseSemester = $(this).find('td:nth-child(4)').text();
+						courseNumber = $(this).find('td:nth-child(2)').text();
+						courseSection = $(this).find('td:nth-child(3)').text();
+						courseName = $(this).find('td:nth-child(5)').text();
+						courseCloneLink = $(this).find('td:nth-child(6)').find('a').attr('href');
+
+						if(courseSection.length > 0) {
+							courseNumber = courseNumber + '(' + courseSection + ')';
+						}
+
+						prevCourseList = prevCourseList + '<li><span class="newClassLabel">' + courseNumber + ' &#8211; ' + courseName + ' &#8211; ' + courseSemester + '</span> <span class="newCourseLink"><a href="' + courseCloneLink + '" class="btn btn-default">Clone Course</a></span></li>';
+
+						t++;
+					}
+				});
+		}
+
+		if(cloneClasses < 3) { // Need to add previous clases
+      
+        // Must update target URL once moving to server
+				$('#pastClassesDiv').load('past.html table.instructor-table', function() {
+					console.log('Loading previous courses');
+
+					// Get number of classes
+					var prevCourseCount = $('#pastClassesDiv').find('tbody').find('tr').length;
+
+					console.log('Past courses: ' + prevCourseCount);
+
+					var totalClasses = prevCourseCount + cloneClasses;
+
+					if(prevCourseCount > 0) { // There are previous courses
+
+            // How many courses do we need to add to get to 3?
+						var courseNeed = 3 - cloneClasses;
+						var i = 0;
+
+            // Get data from table to build list of new courses
+						$('#pastClassesDiv').find('table tbody').find('tr').each(function() {
+							if(i < courseNeed) {
+
+								courseSemester = $(this).find('td:nth-child(2)').text();
+								courseNumber = $(this).find('td:nth-child(3)').text();
+								courseSection = $(this).find('td:nth-child(4)').text();
+								courseName = $(this).find('td:nth-child(5)').text();
+								courseCloneLink = $(this).find('td:nth-child(5)').find('a').attr('href');
+
+								if((courseSection.trim()).length > 0) {
+									courseNumber = courseNumber + '(' + courseSection + ')';
+								}
+
+								// Remove 'Clone Course' string from course name - just the way Ares is. Sigh.
+								courseName = courseName.replace('Clone Course','');
+
+								prevCourseList = prevCourseList + '<li><span class="newClassLabel">' + courseNumber + ' &#8211; ' + courseName + ' &#8211; ' + courseSemester + '</span> <span class="newCourseLink"><a href="' + courseCloneLink + '" class="btn btn-default">Clone Course</a></span></li>';
+
+								i++;
+							}
+
+						});
+            // Add the three classes to the modal window
+						$('#prevCourseContainer').html(prevCourseList);
+						console.log('Total classes: ' + totalClasses);
+
+						if(totalClasses > 3) {
+              // Show link to more previous classes
+			        $('#showMore').show();
+		        }
+					} 
+				}); 
+
+		} else { // There were 3 or more current classes. 
+			
+      // Add the current classes to the modal window
+      $('#prevCourseContainer').html(prevCourseList);
+			console.log('Total classes: ' + totalClasses);
+ 
+			if(totalClasses > 3) {
+        // show link for more classes
+			  $('#showMore').show();
+		  }
+	  }
+
+
 		 if(readCookie('nomyName') !== 'prevent') {
  	 $('.close-myName').click(function() {
       createCookie('nomyName','prevent',7);
