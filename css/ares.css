@@ -28,8 +28,6 @@ tr.odd td,
 input#Keyword { line-height: 1.6em !important; }
 form.ares-search input[type="submit"] { float: none !important; }
 
-/* Silly Aresness */
-.statusNormal { display: none; }
 
 /* Layout shim */
 .right { float: right; }
