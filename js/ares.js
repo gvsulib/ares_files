@@ -279,7 +279,7 @@ $(document).ready(function() {
 					$("#article-book-chapter").slideToggle(400);
 					$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
-					$("#provide-div").html('<div class="line row" style="margin-top:1em;"><div class="span2"><div class="cms-chunk-inner"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div></div><div id="CallNoDiv2" class="span1"><div class="cms-chunk-inner">' + CallNo + '</div></div><style>label[for="CallNumber"]{margin-top:0 !important;}</div>');
+					$("#provide-div").html('<div class="line row row-gutter" style="margin-top:1em;"><div class="span2 col-8 col-sm-12"><div class="cms-chunk-inner"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div></div><div id="CallNoDiv2" class="span1 col-4 col-sm-12"><div class="cms-chunk-inner">' + CallNo + '</div></div><style>label[for="CallNumber"]{margin-top:0 !important;}</div>');
 					$("#CallNoDiv").html("&nbsp;");
 					$("#supply-file").hide();
 
@@ -377,7 +377,7 @@ $(document).ready(function() {
 					document.getElementById("URL").value = ''; // Clear the value
 					$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
-					$("#provide-div").html('<div class="line"><div class="span2 unit left"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span2 unit left lastUnit">' + CallNo + '</div></div>');
+					$("#provide-div").html('<div class="line row row-gutter"><div class="span2 col-8 col-sm-12"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span1 col-4 col-sm-12 lastUnit">' + CallNo + '</div></div>');
 					$("#CallNoDiv").html("&nbsp;");
 					// Show a "loading" animation
 
@@ -420,7 +420,7 @@ $(document).ready(function() {
 			if($("#StaffSearch").is(":checked")) {
 				$("#provide-div").show();
 					CallNo = $("#CallNoDiv").html();
-					$("#provide-div").html('<div class="line"><div class="span2 unit left"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span2 unit left lastUnit">' + CallNo + '</div></div>');
+					$("#provide-div").html('<div class="line row row-gutter"><div class="span2 col-8 col-sm-12"><p>If the library owns or has access to this item, we&#8217;ll use our copy. If not, we&#8217;ll do our best to get a copy we can use. If you know the call number, that will help us find the item more quickly.</p></div><div class="span1 col-4 col-sm-12">' + CallNo + '</div></div>');
 					$("#CallNoDiv").html("&nbsp;");
 			}
 		
