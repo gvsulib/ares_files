@@ -14,6 +14,30 @@ ga('create', 'UA-2700108-13', 'auto');
 ga('send', 'pageview');
 ga('set', 'anonymizeIp', true);
 
+ function createCookie(name,value,days)
+      {
+      	if (days) {
+      		var date = new Date();
+      		date.setTime(date.getTime()+(days*24*60*60*1000));
+      		var expires = "; expires="+date.toGMTString();
+      	}
+      	else var expires = "";
+      	document.cookie = name+"="+value+expires+"; path=/";
+      	$(".close").closest(".update-info").css("display","none");
+      }
+
+      function readCookie(name)
+      {
+      	var nameEQ = name + "=";
+      	var ca = document.cookie.split(';');
+      	for(var i=0;i < ca.length;i++) {
+      		var c = ca[i];
+      		while (c.charAt(0)==' ') c = c.substring(1,c.length);
+      		if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+      	}
+      	return null;
+      }
+
 $(document).ready(function() {
 		// Sub navigation 
 		// Comment for testing
@@ -490,6 +514,17 @@ $(document).ready(function() {
 			});
 
 		}
+
+		 if(readCookie('nomyName') !== 'prevent') {
+ 	 $('.close-myName').click(function() {
+      createCookie('nomyName','prevent',7);
+      $('#myName-banner').hide();
+    });
+ 	 console.log('Showing myName banner');
+ } else {
+  	$('#myName-banner').hide();
+  	console.log('Cookie preventing myName banner.');
+ }
 		
 		
 	});
