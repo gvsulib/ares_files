@@ -517,6 +517,10 @@ $(document).ready(function() {
 
 /* Function for improving Course Cloning */
 
+if($('#addClassModal').length > 0) {
+
+	// On the Instructor homepage
+
 // Check for number of current classes
 		var cloneClasses = $('#main-table table tbody tr .table-action').length; 
 		console.log('Number of classes: ' + cloneClasses);
@@ -614,6 +618,15 @@ $(document).ready(function() {
 			  $('#showMore').show();
 		  }
 	  }
+
+	  // Set listener on Add Classes links
+	  $('.addClassBtn').click(function(e) {
+	  	e.preventDefault();
+	  	$('#addClassModal').show();
+
+	  });
+
+}
 
 
 		 if(readCookie('nomyName') !== 'prevent') {
