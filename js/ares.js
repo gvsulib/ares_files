@@ -522,7 +522,7 @@ if($('#addClassModal').length > 0) {
 	// On the Instructor homepage
 
 // Check for number of current classes
-		var cloneClasses = $('#main-table table tbody tr .table-action').length; 
+		var cloneClasses = $('#current-classes table tbody tr .table-action').length; 
 		console.log('Number of classes: ' + cloneClasses);
 
     // Define variables
@@ -623,6 +623,12 @@ if($('#addClassModal').length > 0) {
 	  $('.addClassBtn').click(function(e) {
 	  	e.preventDefault();
 	  	$('#addClassModal').show();
+
+	  });
+
+	  // Set listener on Close links
+	  $('.close-button').click(function(e) {
+	  	$('#addClassModal').hide();
 
 	  });
 
