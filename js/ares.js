@@ -534,7 +534,9 @@ if($('#addClassModal').length > 0) {
 
 				// Build class list
 
-				$('#main-table table tbody tr').each(function() {
+				console.log('Building former class list');
+
+				$('#current_classes table tbody tr').each(function() {
 					if(t < 3) {
 
 						courseSemester = $(this).find('td:nth-child(4)').text();
@@ -557,7 +559,7 @@ if($('#addClassModal').length > 0) {
 		if(cloneClasses < 3) { // Need to add previous clases
       
         // Must update target URL once moving to server
-				$('#pastClassesDiv').load('past.html table.instructor-table', function() {
+				$('#pastClassesDiv').load('ares.dll?Action=10&Form=2&Value=IPreviousCourseList table.instructor-table', function() {
 					console.log('Loading previous courses');
 
 					// Get number of classes
