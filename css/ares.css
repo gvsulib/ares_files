@@ -25,6 +25,8 @@ tr.odd td,
 .lib-form input[type="radio"],
 .lib-form input[type="checkbox"]{margin-top:.7em;}
 .lib-inline { display: inline-block !important;}
+input#Keyword { line-height: 1.6em !important; }
+form.ares-search input[type="submit"] { float: none !important; }
 
 /* Silly Aresness */
 .statusNormal { display: none; }
@@ -38,7 +40,7 @@ tr.odd td,
 /* Ares menu */
 #cms-content h1 { float: left; }
 #cms-content h1 a { color: #333; text-decoration: none; }
-.lib-horizontal-list.right { list-style: none; float: right; font-size: .85em; }
+.lib-horizontal-list.right { list-style: none; float: right; }
 .lib-horizontal-list li { display: inline-block; }
 .lib-horizontal-list.right li { margin-left: 1em; }
 .lib-horizontal-list.right li a { text-decoration: none; /* color: #0065a4; */}
@@ -65,7 +67,7 @@ a.btn.btn-primary:hover, .btn.btn-primary a:hover { color: #1b6ec2;}
 
 li#lib-fed-deposit {text-align: right;float: right !important;}
 #library-chat a {
-	padding: .65em .85em .65em 3em !important;
+	padding: .35em .85em .35em 3em !important;
 	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAA8klEQVQ4y2NgoAWIPhHNl3I6xSH1TGoRkK5KPpXskXgoUZQYvYxATRmpp1M/pZ1J+4+Gf6WeSm323ObJjlNz2um0TVg0omCgBRdjd8ZyY+gGai4kpBnJkFkompOPJQsBJX4QawAIp5xIMYYbkHoy1Z0UzWADTqcUIDu/GqtTT6fi88YSZANySHUBUM8URBicTjYj2YAzafFwA0JXhbIBnXuP6FgAppOkI0lSqDFxOtkaKPGHqAA8lZKINSUBU1oqUMFXPDb/AQZeG960nHQ6SQmoaB1QwzukEP8CpPcBLTAlKVMlHE9QAGrUYGhgYGKgFQAAoot2F4Rm8VoAAAAASUVORK5CYII=') !important;
 	background-position: 10% 50%;
 	background-repeat: no-repeat;
